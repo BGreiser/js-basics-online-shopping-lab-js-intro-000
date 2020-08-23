@@ -12,8 +12,8 @@ function setCart(c) {
 function addToCart(item) {
   let price = Math.floor(Math.random() * 100 + 1);
   let itemObj = {
-   "itemName": item,
-   'itemPrice': price
+   itemName: `${item}`,
+   itemPrice: `${price}`
  } // end object
 
   cart.push(itemObj);
@@ -50,7 +50,7 @@ function removeFromCart(item) {
   if (cart.indexOf(item) < 0) {
     return "That item is not in your cart."
   } else {
-    delete cart.item;
+    cart.spliceitem;
     return cart;
   };
 }
