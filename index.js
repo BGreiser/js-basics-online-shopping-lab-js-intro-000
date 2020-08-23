@@ -21,8 +21,16 @@ function addToCart(item) {
 } // end addToCart
 
 function viewCart() {
-  // write your code here
-}
+  let cartView = "";
+  if (cart.length === 0) {
+    cartView += "Your shopping cart is empty."
+    return cartView;
+  } else {
+      for (let i = 0; i < cart.length; i++) {
+
+      } // end else
+  }// end if
+}// end viewCart
 
 function total() {
   // write your code here
