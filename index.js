@@ -10,7 +10,7 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  let itemPrice = Math.floor(Math.random() * 100)
+  let itemPrice = Math.floor(Math.random() * 101)
   let itemObj = {
    "itemName": item,
    "price": itemPrice
