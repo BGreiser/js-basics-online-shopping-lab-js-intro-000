@@ -24,8 +24,7 @@ function viewCart() {
   let cartView = "";
   let i = 0;
   if (cart.length === 0) {
-    cartView += "Your shopping cart is empty.";
-    return cartView;
+    return "Your shopping cart is empty.";
   } else if (car.length === 1){
     cartView += `In your cart, you have ${cart[0].itemName} at \$${cart[0].itemPrice}`;
   } else {
@@ -37,7 +36,7 @@ function viewCart() {
     cartView += `and ${cart[i].itemName} at \$${cart[i].itemPrice}.`;
     }//else if
     return cartView;
-    }
+  }// end function
 
 function total() {
   let sumOf = 0;
