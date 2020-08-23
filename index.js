@@ -23,14 +23,16 @@ function addToCart(item) {
 function viewCart() {
   let cartView = "";
   if (cart.length === 0) {
-    cartView += "Your shopping cart is empty."
+    cartView += "Your shopping cart is empty.";
     return cartView;
   } else {
-      for (let i = 0; i < cart.length; i++) {
-
-      } // end else
-  }// end if
-}// end viewCart
+    cartView += "In your cart, you have ";
+    for(let i = 0; i < cart.length; i++) {
+        cartView += `${cart[i].itemName} at \$${cart[i].price}, `
+    }//end for
+    return cartView;
+    }//end if else
+}//end function
 
 function total() {
   // write your code here
