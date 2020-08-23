@@ -10,20 +10,22 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  let itemPrice = Math.floor(Math.random() * 101)
+  let itemPrice = Math.floor(Math.random() * 100)
   let itemObj = {
    "itemName": item,
    "price": itemPrice
  } // end object
 
   cart.push(itemObj);
-  return `${item} has been added to your cart.`;
+  console.log(`${item} has been added to your cart.`);
+  return cart
 } // end addToCart
 
 function viewCart() {
   let cartView = "";
   if (cart.length === 0) {
     cartView += "Your shopping cart is empty.";
+    console.log(cartView);
     return cartView;
   } else {
     cartView += "In your cart, you have ";
