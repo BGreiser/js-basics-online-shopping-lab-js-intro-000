@@ -10,7 +10,7 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  let itemPrice = Math.floor(Math.random() * 100)
+  let itemPrice = Math.floor(Math.random() * 100 + 1);
   let itemObj = {
    "itemName": item,
    "price": itemPrice
@@ -22,18 +22,21 @@ function addToCart(item) {
 
 function viewCart() {
   let cartView = "";
+  let i = 0;
   if (cart.length === 0) {
     cartView += "Your shopping cart is empty.";
-    console.log(cartView);
+    //console.log(cartView);
     return cartView;
   } else {
     cartView += "In your cart, you have ";
-    for(let i = 0; i < cart.length; i++) {
-        cartView += `${cart[i].itemName} at \$${cart[i].price}, `
-    }//end for
+    while (i < cart.length - 1) {
+        cartView += `${cart[i].itemName} at \$${cart[i].price}, `;
+        i = i + 1;
+    } //end while
+    cartView += `and ${cart[i].itemName} at \$${cart[i].price}`;
+    }//else if
     return cartView;
-    }//end if else
-}//end function
+    }
 
 function total() {
   let sumOf = 0;
