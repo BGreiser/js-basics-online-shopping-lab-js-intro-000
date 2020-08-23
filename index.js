@@ -42,7 +42,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  if (cart.indexOf(item) < 0) {
+    return "That item is not in your cart."
+  } else {
+    delete cart.item;
+    return cart;
+  };
 }
 
 function placeOrder(cardNumber) {
