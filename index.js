@@ -25,7 +25,6 @@ function viewCart() {
   let i = 0;
   if (cart.length === 0) {
     cartView += "Your shopping cart is empty.";
-    //console.log(cartView);
     return cartView;
   } else if (car.length === 1){
     cartView += `In your cart, you have ${cart[0].itemName} at \$${cart[0].itemPrice}`;
@@ -35,7 +34,7 @@ function viewCart() {
         cartView += `${cart[i].itemName} at \$${cart[i].itemPrice}, `;
         i = i + 1;
     } //end while
-    cartView += `and ${cart[i].itemName} at \$${cart[i].itemPrice}`;
+    cartView += `and ${cart[i].itemName} at \$${cart[i].itemPrice}.`;
     }//else if
     return cartView;
     }
